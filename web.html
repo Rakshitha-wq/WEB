@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Thulasi B K — Portfolio</title>
+<style>
+*{box-sizing:border-box}
+html,body{margin:0;padding:0;font-family:Inter,system-ui,-apple-system,'Segoe UI',Roboto,Arial}
+.container{max-width:1100px;margin:0 auto;padding:24px}
+.site-header{
+background:linear-gradient(90deg,#0f172a 0%, #1e293b 100%);
+color:#fff;
+}
+.nav{
+display:flex;align-items:center;justify-content:space-between;
+padding:14px 24px;
+}
+.logo{
+font-weight:700;color:#fff;text-decoration:none;font-size:1.2rem;
+}
+.nav-links{
+list-style:none;display:flex;gap:12px;margin:0;padding:0
+}
+.nav-links a{
+color:#dbeafe;text-decoration:none;padding:8px 10px;border-radius:8px;
+}
+.menu-toggle{
+display:none;
+}
+.card{
+background:#fff;border-radius:12px;
+box-shadow:0 8px 30px rgba(16,24,40,0.06);
+padding:20px;margin:18px 0;
+}
+.home-hero{display:grid;gap:18px}
+.intro{display:flex;gap:18px;align-items:center}
+.avatar{width:220px;height:220px;object-fit:cover;border-radius:12px}
+.avatar.small{width:140px;height:140px}
+.tagline{color:#334155;margin-top:6px}
+.cta-row{display:flex;gap:10px;margin-top:12px}
+.btn{
+display:inline-block;padding:10px 14px;background:#f1f5f9;
+border-radius:10px;color:#0f172a;text-decoration:none;cursor:pointer;
+}
+.btn.primary{background:#0ea5a5;color:#fff}
+.btn.outline{background:transparent;border:1px solid #e2e8f0}
+.skill{display:inline-block;background:#eef2ff;padding:6px 10px;margin:6px;border-radius:999px}
+.grid-3{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+gap:12px;
+}
+.resume{display:flex;gap:18px}
+.resume-left{width:300px}
+.resume-right{flex:1}
+.section{margin:12px 0}
+.muted{color:#64748b;font-size:.9rem}
+.job{margin-bottom:12px}
+.print-row{display:flex;gap:10px;margin-top:18px}
+.biodata-table{width:100%;border-collapse:collapse}
+.biodata-table th{width:260px;text-align:left;color:#0f172a}
+.biodata-table td{color:#334155}
+.biodata-actions{margin-top:14px}
+.declaration{margin-top:18px;font-size:.95rem;color:#334155}
+.site-footer{text-align:center;padding:18px 0}
+@media (max-width:880px){
+.resume{flex-direction:column}
+.intro{flex-direction:column}
+.menu-toggle{
+display:inline-block;background:transparent;border:none;color:#fff;
+font-size:1.4rem;
+}
+.nav-links{
+display:none;
+position:absolute;right:20px;top:62px;
+background:#0f172a;padding:10px;border-radius:8px;
+flex-direction:column;
+}
+.nav-links.show{display:flex;}
+}
+@media print{
+.site-header,.site-footer,.menu-toggle{display:none}
+.card{box-shadow:none;border-radius:0}
+}
+</style>
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+</head>
+<body>
+<header class="site-header">
+<nav class="nav container">
+<a class="logo" href="#">▲L</a>
+<ul class="nav-links">
+<li><a href="#home">Home</a></li>
+<li><a href="#resume">Resume</a></li>
+<li><a href="#biodata">Bio-data</a></li>
+<li><a id="downloadResume" href="#">Download PDF</a></li>
+</ul>
+<button class="menu-toggle">☰</button>
+</nav>
+</header>
+<main id="home" class="container home-hero">
+<section class="intro card">
+<div class="intro-left">
+<img class="avatar"
+src="https://cdn-icons-png.flaticon.com/512/149/149071.png"
+alt="Avatar" />
+</div>
+<div class="intro-right">
+<h1>Lavanya M S</h1>
+<p class="tagline">Engineering student • Frontend developer • Problem solver</p>
+<p>
+Hi — I'm Lavanya. I design and develop responsive, intuitive web experiences.
+I enjoy building clean layouts that work seamlessly across devices.
+I’m passionate about writing structured, optimized code.
+Committed to creating meaningful digital products that enhance user interaction.
+</p>
+
+<div class="cta-row">
+<a class="btn primary" href="#resume">View Resume</a>
+<a class="btn" href="#biodata">View Bio-data</a>
+</div>
+
+<h4>Key Skills</h4>
+<div class="skill-list">
+<span class="skill">HTML</span>
+<span class="skill">CSS</span>
+<span class="skill">JavaScript</span>
+<span class="skill">jQuery</span>
+<span class="skill">React (familiar)</span>
+</div>
+</div>
+</section>
+
+<section class="highlights card">
+<h2>Highlights</h2>
+<div class="grid-3">
+<div class="feature">
+<h3>Projects</h3>
+<p>Dynamic dashboards, interactive forms, UI components.</p>
+</div>
+<div class="feature">
+<h3>Experience</h3>
+<p>Internship experience in frontend and software testing.</p>
+</div>
+<div class="feature">
+<h3>Education</h3>
+<p>B.E. Computer Science — expected 2027</p>
+</div>
+</div>
+</section>
+</main>
+<main id="resume" class="container resume card">
+<div class="resume-left">
+<img class="avatar small"
+src="https://cdn-icons-png.flaticon.com/512/149/149071.png" />
+<section class="section">
+<h4>Contact</h4>
+<p>Email: lavanya@example.com</p>
+<p>Phone: +91-9886533728</p>
+<p>Location: Shimoga, Karnataka</p>
+</section>
+<section class="section">
+<h4>Technical Skills</h4>
+<ul>
+<li>HTML, CSS, JavaScript, jQuery</li>
+<li>React basics, Node.js</li>
+<li>Git, REST APIs</li>
+</ul>
+</section>
+<section class="section">
+<h4>Education</h4>
+<p><strong>B.E. — Computer Science</strong><br>JNNCE College (2023–present)</p>
+</section>
+</div>
+<div class="resume-right">
+<h1>Resume</h1>
+<section class="section">
+<h3>Professional Summary</h3>
+<p>Motivated engineering student skilled in building responsive user interfaces with clean code and accessibility.</p>
+</section>
+<section class="section">
+<h3>Experience</h3>
+<div class="job">
+<h4>Frontend Intern — TechNova Solutions</h4>
+<p class="muted">Jun 2024 – Aug 2024</p>
+<ul>
+<li>Built interactive UI components.</li>
+<li>Improved performance by optimizing assets.</li>
+</ul>
+</div>
+
+<div class="job">
+<h4>Project: Interactive Dashboard</h4>
+<p class="muted">2025</p>
+<ul>
+<li>Built charts and filters with responsive layout.</li>
+<li>Added keyboard accessibility.</li>
+</ul>
+</div>
+</section>
+<section class="section">
+<h3>Achievements</h3>
+<ul>
+<li>Winner — College Hackathon (2024)</li>
+<li>Top 10 in National Coding Contest (2023)</li>
+</ul>
+</section>
+<div class="print-row">
+<button id="printBtn" class="btn">Print / Save as PDF</button>
+</div>
+</div>
+</main>
+<main id="biodata" class="container biodata card">
+<h1>Bio-data</h1>
+<table class="biodata-table" cellpadding="6">
+<tr><th>Full Name</th><td>Lavanya M S</td></tr>
+<tr><th>Father's Name</th><td>Shivakumar</td></tr>
+<tr><th>Date of Birth</th><td>01 January 2005</td></tr>
+<tr><th>Gender</th><td>Female</td></tr>
+<tr><th>Marital Status</th><td>Single</td></tr>
+<tr><th>Address</th><td>Shimoga,Karnataka, India</td></tr>
+<tr><th>Phone</th><td>+91-9886533728</td></tr>
+<tr><th>Email</th><td>lavanya@example.com</td></tr>
+<tr><th>Languages</th><td>English, Hindi, Marathi</td></tr>
+<tr><th>Qualification</th><td>B.E. — Computer Science (ongoing)</td></tr>
+</table>
+<div class="biodata-actions">
+<button id="printBiodata" class="btn">Print / Save as PDF</button>
+</div>
+<p class="declaration">I hereby declare that the information given above is true to the best of my knowledge.</p>
+</main>
+<footer class="site-footer">
+<small>© <span id="year"></span> Lavanya M S</small>
+</footer>
+<script>
+$(function(){
+$('#year').text(new Date().getFullYear());
+$('.menu-toggle').on('click', function(){
+$('.nav-links').toggleClass('show');
+});
+$('a[href^="#"]').on('click', function(e){
+var target = $(this.getAttribute('href'));
+if(target.length){
+e.preventDefault();
+$('html, body').animate({scrollTop: target.offset().top - 40}, 300);
+}
+});
+$('#printBtn, #printBiodata').on('click', function(){ window.print(); });
+$('#downloadResume').on('click', function(e){
+e.preventDefault();
+var content = "Resume - Thulasi B K\n(Replace with real PDF)";
+var blob = new Blob([content], {type:'text/plain'});
+var url = URL.createObjectURL(blob);
+var a = document.createElement('a');
+a.href = url;
+a.download = "Thulasi_Resume.txt";
+a.click();
+URL.revokeObjectURL(url);
+});
+});
+</script>
+</body>
+</html>
